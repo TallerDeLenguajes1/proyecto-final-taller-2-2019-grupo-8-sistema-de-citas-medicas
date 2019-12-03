@@ -56,11 +56,15 @@ namespace CapaPresentacion.Vistas
                         UsuarioAdd.EsActivo = false;
                     }
                     UsuarioAdd.FechaDeAlta = dt_fechaAlta.SelectedDate.Value;
+                    bool valido = new Entidades.Helps.ValidacionDatos(UsuarioAdd).Validar();
 
-                    ObjetoCCM.InsertarUsuarios(UsuarioAdd);
-                    MessageBox.Show("El Registro se Ingreso Satisfactoriamente");
-                    MostrarUsuarios();
-                    LimpiarCampos();
+                    if (valido==true) {
+                        ObjetoCCM.InsertarUsuarios(UsuarioAdd);
+                        MessageBox.Show("El Registro se Ingreso Satisfactoriamente");
+                        MostrarUsuarios();
+                        LimpiarCampos();
+                    }
+                    
                 }
                 catch (Exception ex)
                 {

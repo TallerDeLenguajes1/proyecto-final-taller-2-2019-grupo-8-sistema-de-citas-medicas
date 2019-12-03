@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CapaPresentacion"
         mc:Ignorable="d"
-        Title="BIENVENIDOS AL SISTEMA DE GESTION DE CITAS" Height="400" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="LOGIN" Height="492" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" TextBlock.TextAlignment="Center" Background="White">
     <Grid>
 
-        <Button x:Name="btn_ingresar" Content="INGRESAR" HorizontalAlignment="Left" Margin="140,270,0,0" VerticalAlignment="Top" Width="116" Height="30" Click="btn_ingresar_Click"/>
-        <Label x:Name="lbl_usuario" Content="Usuario" HorizontalAlignment="Left" Margin="94,46,0,0" VerticalAlignment="Top" Width="200"/>
-        <TextBox x:Name="txt_nombreUsuario" HorizontalAlignment="Left" Height="24" Margin="94,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <Label x:Name="lbl_contraseña" Content="Contraseña" HorizontalAlignment="Left" Margin="94,122,0,0" VerticalAlignment="Top" Width="200"/>
-        <PasswordBox x:Name="psw_contraseña" HorizontalAlignment="Left" Margin="94,148,0,0" VerticalAlignment="Top" Width="200" Height="24" PasswordChar="*"/>
-        <Label x:Name="lbl_mensajeDeError" Content="Mensaje de Error: " HorizontalAlignment="Left" Margin="70,196,0,0" VerticalAlignment="Top" Visibility="Hidden" FontSize="16"/>
+        <Button x:Name="btn_ingresar" Content="INGRESAR" Margin="137.333,348.333,142.667,0" VerticalAlignment="Top" Height="30" Click="btn_ingresar_Click"/>
+        <Label x:Name="lbl_usuario" Content="Usuario" Margin="82,97.666,125.423,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_nombreUsuario" HorizontalAlignment="Left" Height="24" Margin="82,128.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="lbl_contraseña" Content="Contraseña" HorizontalAlignment="Left" Margin="82,172.666,0,0" VerticalAlignment="Top" Width="184"/>
+        <PasswordBox x:Name="psw_contraseña" HorizontalAlignment="Left" Margin="82,198.667,0,0" VerticalAlignment="Top" Width="184" Height="24" PasswordChar="*"/>
+        <Label x:Name="lbl_mensajeDeError" Content="Mensaje de Error: " Margin="82,281.666,78,126.333" Visibility="Visible" FontSize="16" FontFamily="Arial Narrow" FontStyle="Italic" Foreground="Red" Height="55" TextBlock.TextAlignment="Center"/>
 
     </Grid>
 </Window>
