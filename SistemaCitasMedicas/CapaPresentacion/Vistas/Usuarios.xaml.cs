@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows;
 using Entidades;
 using System;
+using CapaPresentacion.Vistas.CP_Reserva;
 
 namespace CapaPresentacion.Vistas
 {
@@ -71,7 +72,7 @@ namespace CapaPresentacion.Vistas
 
                     MessageBox.Show("No Se Pudo Ingresar el Registro: " + ex.ToString());
                 }
-
+                
 
             }
             //EDITAR
@@ -191,8 +192,8 @@ namespace CapaPresentacion.Vistas
             cmb_tipoUsuario.Text = "Estándar";
             cmb_estadoUsuario.Text = "Habilitado";
             dt_fechaAlta.Text= DateTime.Now.ToString();
-
-
+            
+            
         
         }
     }

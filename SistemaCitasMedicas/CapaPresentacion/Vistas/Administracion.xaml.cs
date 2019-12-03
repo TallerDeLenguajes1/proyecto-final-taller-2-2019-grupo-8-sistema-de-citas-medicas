@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Entidades.Cache;
+using CapaPresentacion.Vistas.CP_Reserva;
+
 namespace CapaPresentacion.Vistas
 {
     /// <summary>
@@ -44,6 +46,30 @@ namespace CapaPresentacion.Vistas
         {
             Usuarios VentanaUsuario = new Usuarios();
             VentanaUsuario.ShowDialog();
+        }
+
+        private void btn_abm_paciente_Click(object sender, RoutedEventArgs e)
+        {
+            Pacientes ventana_paciente = new Pacientes();
+            ventana_paciente.ShowDialog();
+        }
+
+        private void btn_abmMedico_Click(object sender, RoutedEventArgs e)
+        {
+            Medicos ventana_medico = new Medicos();
+            ventana_medico.ShowDialog();
+        }
+
+        private void btn_ReservarTurno_Click(object sender, RoutedEventArgs e)
+        {
+            CP_ReservaCarga ventanaReservaCarga = new CP_ReservaCarga();
+            ventanaReservaCarga.ShowDialog();
+        }
+
+        private void btn_RegistrosCitas_Click(object sender, RoutedEventArgs e)
+        {
+            CP_ReservaRegistros ventanaRegistrosCM = new CP_ReservaRegistros();
+            ventanaRegistrosCM.ShowDialog();
         }
     }
 }
