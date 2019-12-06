@@ -9,6 +9,7 @@ namespace CapaDatos
         CD_Conexion conexion = new CD_Conexion();
 
 
+        //FUNCION PARA LEER TODOS LOS USUARIOS DE LA BASE DE DATOS
         public List<Usuario> GetUsuarios()
         {
             MySqlDataReader leer;
@@ -37,7 +38,7 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return UsuariosDelaBD;
         }
-
+        //FUNCION PARA AGREGAR LOS USUARIOS
         public void InsertarUsuarios(Usuario usuario)
         {
             MySqlCommand comando = new MySqlCommand();
@@ -61,7 +62,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
 
         }
-
+        //FUNCION PARA MODIFICAR USUARIOS
         public void ModificarUsuarios(Usuario usuario)
         {
             MySqlCommand comando = new MySqlCommand();
@@ -89,12 +90,14 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
 
         }
+
+        //FUNCION PARA ELIMINAR USUARIOS
         public void EliminarUsuario(string idUsuario)
         {
             MySqlCommand comando = new MySqlCommand();
 
             //string cadena = "DELETE FROM usuario WHERE id_usuario=@idUsuario";
-            string cadena = "UPDATE usuario SET es_activo=0 WHERE id_usuario=@idUsuario";
+            string cadena = "UPDATE usuario SET es_activo=0 WHERE id_usuario=@idUsuario";//BORRADO LOGICO
 
             comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             comando.Connection = conexion.AbrirConexion();

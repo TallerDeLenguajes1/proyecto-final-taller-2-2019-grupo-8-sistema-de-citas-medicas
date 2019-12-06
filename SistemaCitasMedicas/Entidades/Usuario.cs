@@ -21,6 +21,9 @@ namespace Entidades
 
         public int ID_Usuario { get => id_usuario; set => id_usuario = value; }
 
+        //APLICO LA VALIDACION DE DATOS DESDE AQUI, LUEGO CON UNA CLASE HELPS Y UN METODO DE ELLA 
+        //CONTROLARE LOS DATOS PARA MOSTRAR AL USUARIO LAS RESTRICCIONES
+
         [Required(ErrorMessage = "Debe Ingresar un Nombre de Usuario")]
         [StringLength(maximumLength:15,MinimumLength =5,ErrorMessage ="El USUARIO debe tener como maximo 15 digitos")]
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }

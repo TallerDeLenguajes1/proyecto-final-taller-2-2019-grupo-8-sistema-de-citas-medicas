@@ -9,6 +9,7 @@ using System.Data;
 
 namespace CapaDatos
 {
+    //ESTA CLASE SE USA PARA HACER LAS TRANSACCIONES PARA UN CORRECTO LOGIN EN EL SISTEMA
     public class CD_Login
     {
         CD_Conexion conexion = new CD_Conexion();
@@ -29,6 +30,9 @@ namespace CapaDatos
                 {
                     while (leer.Read())
                     {
+                        //AQUI GUARDO LOS DATOS DEL USUARIO PARA PODER MOSTRAR QUIEN ESTA MANEJANDO EL SISTEMA EN
+                        //TIEMPO REAL
+
                         UsuarioLoginCache.ID_Usuario = leer.GetInt32(0);
                         UsuarioLoginCache.NombreUsuario = leer.GetString(1);
                         UsuarioLoginCache.Nombre = leer.GetString(2);

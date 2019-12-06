@@ -8,6 +8,10 @@ using System.Windows;
 
 namespace Entidades.Helps
 {
+    //UTILIZO ESTA CLASE PARA PODER HACER LA VALIDACION DE DATOS
+    //LA CUAL EVALUARA CADA RESTRICCION QUE SE PUSO EN LA CLASE USUARIO
+    //(A FUTURO SE DEBEN INGRESAR EN TODAS LAS CLASES ESTA EVALUACION)
+
     public class ValidacionDatos
     {
         private ValidationContext Contexto;

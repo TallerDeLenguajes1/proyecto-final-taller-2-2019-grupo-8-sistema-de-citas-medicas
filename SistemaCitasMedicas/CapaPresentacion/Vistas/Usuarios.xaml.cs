@@ -5,6 +5,9 @@ using Entidades;
 using System;
 using CapaPresentacion.Vistas.CP_Reserva;
 using NLog;
+using System.IO;
+using System.Collections.Generic;
+using Entidades.Cache;
 
 namespace CapaPresentacion.Vistas
 {
@@ -21,12 +24,17 @@ namespace CapaPresentacion.Vistas
         }
         CCM_Usuario ObjetoCCM = new CCM_Usuario();
         private string idUsuario = null;
+
+        // LA VARIABLE EDITAR SIRVE PARA PODER CAMBIAR LA FUNCIONALIDAD DEL BOTON DE GUARDADO DE DATOS(ALTA/MODIFICACION)
         public bool Editar = false;
+
         private void MostrarUsuarios()
         {
             dtg_verUsuarios.ItemsSource = ObjetoCCM.MostrarUsuarios();
         }
+        //DECLARO VARIABLE PARA NLOG
         private static Logger logger = LogManager.GetCurrentClassLogger();
+
 
         private void btn_agregarUsuario_Click(object sender, RoutedEventArgs e)
         {
@@ -60,6 +68,8 @@ namespace CapaPresentacion.Vistas
                         UsuarioAdd.EsActivo = false;
                     }
                     UsuarioAdd.FechaDeAlta = dt_fechaAlta.SelectedDate.Value;
+
+                    //AQUI CHEQUEO QUE LOS DATOS ESTEN BIEN INGRESADOS
                     bool valido = new Entidades.Helps.ValidacionDatos(UsuarioAdd).Validar();
 
                     if (valido == true)
@@ -126,11 +136,15 @@ namespace CapaPresentacion.Vistas
         private void btn_modificarUsuario_Click(object sender, RoutedEventArgs e)
         {
 
+            //ESTA FUNCION ES PARA PODER CAPTURAR EL ELEMENTO QUE ESTA EN EL DATAGRID
+            //Y UNA VEZ QUE LO HAGO CASTEO ESOS DATOS PARA PODER INGRESARLOS EN UNA 
+            //VARIABLE DE TIPO USUARIO
 
             if (dtg_verUsuarios.SelectedCells.Count > 0)
             {
 
                 Editar = true;
+
                 Usuario UsuarioMod = (Usuario)dtg_verUsuarios.SelectedItem;
                 txt_nombreUsuario.Text = UsuarioMod.NombreUsuario;
                 txt_nombre.Text = UsuarioMod.Nombre;
@@ -187,6 +201,7 @@ namespace CapaPresentacion.Vistas
             }
         }
 
+        //FUNCION PARA LIMPIAR LOS CAMPOS DEL FORMULARIO UNA VEZ QUE SE HAN GUARDADO DATOS
         private void LimpiarCampos() {
             txt_nombreUsuario.Clear();
             txt_nombre.Clear();

@@ -29,7 +29,7 @@
         <TextBox x:Name="txt_nombreUsuario" HorizontalAlignment="Left" Height="24" Margin="82,128.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
         <Label x:Name="lbl_contraseña" Content="Contraseña" HorizontalAlignment="Left" Margin="82,172.666,0,0" VerticalAlignment="Top" Width="184" FontFamily="Century Gothic"/>
         <PasswordBox x:Name="psw_contraseña" HorizontalAlignment="Left" Margin="82,198.667,0,0" VerticalAlignment="Top" Width="184" Height="24" PasswordChar="*"/>
-        <Label x:Name="lbl_mensajeDeError" Content="Mensaje de Error: " Margin="62.333,281.666,61.667,126.334" Visibility="Visible"
+        <Label x:Name="lbl_mensajeDeError" Content="Mensaje de Error: " Margin="62.333,281.666,61.667,126.334" Visibility="Hidden"
                FontSize="11" FontFamily="Century Gothic" FontStyle="Italic" Foreground="Red" Height="55" TextBlock.TextAlignment="Center"/>
 
     </Grid>
