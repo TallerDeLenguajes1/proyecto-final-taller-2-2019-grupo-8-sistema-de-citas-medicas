@@ -31,7 +31,7 @@
         <RadioButton x:Name="rdBtnUsu" Content="" HorizontalAlignment="Left" Margin="381,77,0,0" VerticalAlignment="Top" GroupName="FiltroEntidad" Checked="rdBtnFiltroEnt_Checked"/>
         <RadioButton x:Name="rdBtnMatmed" Content="" HorizontalAlignment="Left" Margin="197,77,0,0" VerticalAlignment="Top" GroupName="FiltroEntidad" Checked="rdBtnFiltroEnt_Checked"/>
         <RadioButton x:Name="rdBtnDnipac" Content="" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" GroupName="FiltroEntidad" Checked="rdBtnFiltroEnt_Checked"/>
-        <Label Content="Busqueda: Seleccionar filtros de busqueda para paciente, medico o usuario y luego filtrar fecha " HorizontalAlignment="Left" Margin="29,7,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="10"/>
+        <Label Content="Busqueda: Seleccionar filtros de busqueda para paciente, medico o usuario, complete el dato entero a buscar y luego filtrar fecha " HorizontalAlignment="Left" Margin="29,7,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="10"/>
         <Button x:Name="button" Content="GENERAR INFORME" HorizontalAlignment="Left" Margin="662,23,0,0" VerticalAlignment="Top" Width="170" Click="button_Click" Height="45" Grid.Row="2" Background="#FFE0F049" Foreground="#FF320F0F"/>
     </Grid>
 </Window>
