@@ -9,6 +9,8 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using Entidades;
 using CapaCitasMedicas;
+using System.IO;
+using Entidades.Cache;
 
 namespace CapaPresentacion.Vistas.CP_Reserva
 {
@@ -27,7 +29,17 @@ namespace CapaPresentacion.Vistas.CP_Reserva
 
             DatosParaIniciar();
         }
+        private void CrearAchivo(List<Reserva> lista)
+        {
+            using (StreamWriter csvCurso = new StreamWriter(UsuarioLoginCache.NombreUsuario + ".csv"))
+            {
+                foreach (Reserva reserva in lista)
+                {
+                    csvCurso.WriteLine(reserva);
+                }
 
+            }
+        }
         private void DatosParaIniciar()
         {
             this.listReservasAll = new List<Reserva>();
@@ -252,6 +264,18 @@ namespace CapaPresentacion.Vistas.CP_Reserva
 
         }
 
-
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CrearAchivo(reservaCCM.ListaReservas_All());
+                MessageBox.Show("INFORME GENERADO CON EXITO");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("NO SE PUDO GENERAR INFORME: " + ex.ToString());
+                throw;
+            }
+        }
     }
 }

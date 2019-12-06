@@ -55,7 +55,28 @@ namespace Entidades
         public int IdPaciente { get => idPaciente; set => idPaciente = value; } //decia internal en vez de int, solo de prueba
         public int IdMedico { get => idMedico; set => idMedico = value; } //decia internal en vez de int, solo de prueba
         public DateTime FechaAltaCita { get => fechaAltaCita; set => fechaAltaCita = value; }
-        public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }  
+        public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
+
+        public override string ToString()
+        {
+
+            return "Asunto Cita: " + AsuntoCita +
+                    " - DNI PACIENTE: " + dniPaciente +
+                    " - APELLIDO PACIENTE: " + apellidoPaciente +
+                    " - NOMBRE PACIENTE: " + nombrePaciente +
+                    " - MATRICULA MEDICO: " + matricula +
+                    " - APELLIDO MEDICO: " + apellidoMedico +
+                    " - NOMBRE MEDICO: " + nombreMedico +
+                    " - ESPECIALIDAD: " + especialidad +
+                    " - FECHA CITA: " + fechaCita +
+                    " - HORA CITA: " + horaCita +
+                    " - PRECIO: " + precio +
+                    " - ESTADO PAGO: " + estadoPago +
+                    " - ESTADO CITA: " + estadoCita +
+                    " - FECHA DE ALTO: " + fechaAltaCita +
+                    " - USUARIO QUE REGISTRA: " + nombreUsuario;
+
+        }
 
     }
 
